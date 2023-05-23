@@ -1,7 +1,50 @@
-# CMP 464 – HW 5
+# HW5 - Full Stack React
+Now that we know how to stand up a FSW app using React and Express  it's a good time for y'all to try to launch your own. Your assignment will be completed in three parts.
 
 
-**Due Date:** 3/27/2023 by 11:59pm
+Part 1: Create an Express App serving up your React Frontend: Due by Friday
+Following what we did in class on Monday as well as this tutorial you will need to stand up a server hosted version of your FavLinks app (the last hw with the form and table of links).  In order to do this you will need to create an express server on port 8000 that will host your react app so if you went to http://localhost:8000/ the server should return your application.
+
+
+Part 2: Connect your React/Express App to Postgres: Due by Next Friday
+Start by reading this tutorial about connecting an Express app to Postgres
+*Note you will keep your server on Port 8000 and be creating a new table for the hw*
+When you're ready to start the last part of the hw, create a new table in your Postgres database called links that is saving link names and URLs similar to how they do in the tutorial like so:
+api=>
+CREATE TABLE links (
+  ID SERIAL PRIMARY KEY,
+  name VARCHAR(30),
+  URL VARCHAR(30)
+);
+Using your express server running on port 8000 from part 1 of the homework add the following routes to your API:
+GET: / 
+Should return your React application
+
+GET: /links
+Should return the links stored on your Postgres database
+
+GET: /links/:id 
+Should retrieve a link by id
+
+POST: /links
+Should create a new link 
+
+PUT: /links/:id 
+Should update a link at a specific id
+
+DELETE: /links/:id 
+Should delete a link at a specific id
+
+
+
+Part 3: Connect your React app to your Express database routes: Due by Monday the 1st
+Wire up your React application to call the various methods on your server where applicable. For instance, when a user first loads the application you should fetch all the links and populate your app with the links saved in your database. Then when a user adds a new link to the table it should also add to the database. Finally when a user decides to delete a particular link from the table you should remove that link from your database as well.
+Extra credit: Add the logic to update a link :wink:
+
+
+-------------------------------------------------------------------------------------------------------------
+Previous Homework Instructions
+
 
 **Submission Type:** Slack
 
