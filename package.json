@@ -1,17 +1,19 @@
 {
-  "name": "favlinks",
+  "name": "favlinks5",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start-server": "node server/index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Now that we know how to stand up a FSW app using React and Express  it's a good time for y'all to try to launch your own. Your assignment will be completed in three parts.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
